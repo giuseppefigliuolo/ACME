@@ -1,0 +1,7 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": ["plugin:@stencil/recommended"],
+  "ignorePatterns": ["stencil.config.ts"]
+}
