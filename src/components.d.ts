@@ -6,56 +6,48 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface AcmeBanner {
         /**
-          * The first name
+          * Text written inside the button
          */
-        "first": string;
+        "callToAction": string;
         /**
-          * The last name
+          * Title for the banner
          */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "titleBanner": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAcmeBannerElement extends Components.AcmeBanner, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAcmeBannerElement: {
+        prototype: HTMLAcmeBannerElement;
+        new (): HTMLAcmeBannerElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "acme-banner": HTMLAcmeBannerElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface AcmeBanner {
         /**
-          * The first name
+          * Text written inside the button
          */
-        "first"?: string;
+        "callToAction"?: string;
         /**
-          * The last name
+          * Title for the banner
          */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "titleBanner"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "acme-banner": AcmeBanner;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "acme-banner": LocalJSX.AcmeBanner & JSXBase.HTMLAttributes<HTMLAcmeBannerElement>;
         }
     }
 }

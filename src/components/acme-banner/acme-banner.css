@@ -1,0 +1,60 @@
+:host {
+  display: block;
+}
+
+h2 {
+  position: relative;
+  width: 560px;
+  height: 216px;
+  left: 146px;
+  top: 147px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 45px;
+  line-height: 148%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: white;
+}
+
+.banner {
+  background-size: cover !important;
+  height: 800px;
+  width: 100vw;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  width: 300px;
+  height: 73px;
+  left: 146px;
+  top: 439px;
+  background: #02a4e3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button p {
+  margin: 0 auto;
+  align-self: center;
+  font-size: 30px;
+  line-height: 161%;
+  /* or 48px */
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
