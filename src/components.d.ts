@@ -16,6 +16,16 @@ export namespace Components {
          */
         "titleBanner": string;
     }
+    interface AcmeSubBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord": string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle": string;
+    }
 }
 declare global {
     interface HTMLAcmeBannerElement extends Components.AcmeBanner, HTMLStencilElement {
@@ -24,8 +34,15 @@ declare global {
         prototype: HTMLAcmeBannerElement;
         new (): HTMLAcmeBannerElement;
     };
+    interface HTMLAcmeSubBannerElement extends Components.AcmeSubBanner, HTMLStencilElement {
+    }
+    var HTMLAcmeSubBannerElement: {
+        prototype: HTMLAcmeSubBannerElement;
+        new (): HTMLAcmeSubBannerElement;
+    };
     interface HTMLElementTagNameMap {
         "acme-banner": HTMLAcmeBannerElement;
+        "acme-sub-banner": HTMLAcmeSubBannerElement;
     }
 }
 declare namespace LocalJSX {
@@ -39,8 +56,19 @@ declare namespace LocalJSX {
          */
         "titleBanner"?: string;
     }
+    interface AcmeSubBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord"?: string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle"?: string;
+    }
     interface IntrinsicElements {
         "acme-banner": AcmeBanner;
+        "acme-sub-banner": AcmeSubBanner;
     }
 }
 export { LocalJSX as JSX };
@@ -48,6 +76,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "acme-banner": LocalJSX.AcmeBanner & JSXBase.HTMLAttributes<HTMLAcmeBannerElement>;
+            "acme-sub-banner": LocalJSX.AcmeSubBanner & JSXBase.HTMLAttributes<HTMLAcmeSubBannerElement>;
         }
     }
 }
