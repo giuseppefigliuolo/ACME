@@ -6,19 +6,45 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AcmeHeader {
+    }
+    interface FormFinanziabilita {
+    }
 }
 declare global {
+    interface HTMLAcmeHeaderElement extends Components.AcmeHeader, HTMLStencilElement {
+    }
+    var HTMLAcmeHeaderElement: {
+        prototype: HTMLAcmeHeaderElement;
+        new (): HTMLAcmeHeaderElement;
+    };
+    interface HTMLFormFinanziabilitaElement extends Components.FormFinanziabilita, HTMLStencilElement {
+    }
+    var HTMLFormFinanziabilitaElement: {
+        prototype: HTMLFormFinanziabilitaElement;
+        new (): HTMLFormFinanziabilitaElement;
+    };
     interface HTMLElementTagNameMap {
+        "acme-header": HTMLAcmeHeaderElement;
+        "form-finanziabilita": HTMLFormFinanziabilitaElement;
     }
 }
 declare namespace LocalJSX {
+    interface AcmeHeader {
+    }
+    interface FormFinanziabilita {
+    }
     interface IntrinsicElements {
+        "acme-header": AcmeHeader;
+        "form-finanziabilita": FormFinanziabilita;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "acme-header": LocalJSX.AcmeHeader & JSXBase.HTMLAttributes<HTMLAcmeHeaderElement>;
+            "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
         }
     }
 }
