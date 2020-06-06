@@ -6,56 +6,45 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface AcmeHeader {
+    }
+    interface FormFinanziabilita {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAcmeHeaderElement extends Components.AcmeHeader, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAcmeHeaderElement: {
+        prototype: HTMLAcmeHeaderElement;
+        new (): HTMLAcmeHeaderElement;
+    };
+    interface HTMLFormFinanziabilitaElement extends Components.FormFinanziabilita, HTMLStencilElement {
+    }
+    var HTMLFormFinanziabilitaElement: {
+        prototype: HTMLFormFinanziabilitaElement;
+        new (): HTMLFormFinanziabilitaElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "acme-header": HTMLAcmeHeaderElement;
+        "form-finanziabilita": HTMLFormFinanziabilitaElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface AcmeHeader {
+    }
+    interface FormFinanziabilita {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "acme-header": AcmeHeader;
+        "form-finanziabilita": FormFinanziabilita;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "acme-header": LocalJSX.AcmeHeader & JSXBase.HTMLAttributes<HTMLAcmeHeaderElement>;
+            "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
         }
     }
 }
