@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Poppins, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+h2 {
+  font-size: 41px;
+  color: #02467c;
+  font-weight: 100;
+}
+.banner {
+  width: 600px;
+  height: auto;
+  background-color: #fff;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: -4px 4px 16px rgba(209, 205, 199, 0.49);
+  padding: 2rem;
+}
+.text {
+  width: 400px;
+}
+.quote {
+  font-size: 26px;
+  color: #02467c;
+  font-style: italic;
+}
+em {
+  color: #52c1eb;
+}
+p {
+  font-size: 20px;
+  color: #02467c;
+}
+img {
+  position: absolute;
+  right: -200px;
+  bottom: -100px;
+}
