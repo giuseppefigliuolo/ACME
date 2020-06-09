@@ -6,17 +6,17 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AcmeHeader {
+    interface AcmeAbout {
     }
     interface FormFinanziabilita {
     }
 }
 declare global {
-    interface HTMLAcmeHeaderElement extends Components.AcmeHeader, HTMLStencilElement {
+    interface HTMLAcmeAboutElement extends Components.AcmeAbout, HTMLStencilElement {
     }
-    var HTMLAcmeHeaderElement: {
-        prototype: HTMLAcmeHeaderElement;
-        new (): HTMLAcmeHeaderElement;
+    var HTMLAcmeAboutElement: {
+        prototype: HTMLAcmeAboutElement;
+        new (): HTMLAcmeAboutElement;
     };
     interface HTMLFormFinanziabilitaElement extends Components.FormFinanziabilita, HTMLStencilElement {
     }
@@ -25,17 +25,17 @@ declare global {
         new (): HTMLFormFinanziabilitaElement;
     };
     interface HTMLElementTagNameMap {
-        "acme-header": HTMLAcmeHeaderElement;
+        "acme-about": HTMLAcmeAboutElement;
         "form-finanziabilita": HTMLFormFinanziabilitaElement;
     }
 }
 declare namespace LocalJSX {
-    interface AcmeHeader {
+    interface AcmeAbout {
     }
     interface FormFinanziabilita {
     }
     interface IntrinsicElements {
-        "acme-header": AcmeHeader;
+        "acme-about": AcmeAbout;
         "form-finanziabilita": FormFinanziabilita;
     }
 }
@@ -43,7 +43,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "acme-header": LocalJSX.AcmeHeader & JSXBase.HTMLAttributes<HTMLAcmeHeaderElement>;
+            "acme-about": LocalJSX.AcmeAbout & JSXBase.HTMLAttributes<HTMLAcmeAboutElement>;
             "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
         }
     }
