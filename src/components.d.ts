@@ -18,6 +18,12 @@ export namespace Components {
          */
         "titleBanner": string;
     }
+    interface AcmeFooter {
+        /**
+          * Footer main text
+         */
+        "footerText": string;
+    }
     interface AcmeMenu {
     }
     interface AcmeSubBanner {
@@ -46,6 +52,12 @@ declare global {
         prototype: HTMLAcmeBannerElement;
         new (): HTMLAcmeBannerElement;
     };
+    interface HTMLAcmeFooterElement extends Components.AcmeFooter, HTMLStencilElement {
+    }
+    var HTMLAcmeFooterElement: {
+        prototype: HTMLAcmeFooterElement;
+        new (): HTMLAcmeFooterElement;
+    };
     interface HTMLAcmeMenuElement extends Components.AcmeMenu, HTMLStencilElement {
     }
     var HTMLAcmeMenuElement: {
@@ -67,6 +79,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "acme-about": HTMLAcmeAboutElement;
         "acme-banner": HTMLAcmeBannerElement;
+        "acme-footer": HTMLAcmeFooterElement;
         "acme-menu": HTMLAcmeMenuElement;
         "acme-sub-banner": HTMLAcmeSubBannerElement;
         "form-finanziabilita": HTMLFormFinanziabilitaElement;
@@ -85,6 +98,12 @@ declare namespace LocalJSX {
          */
         "titleBanner"?: string;
     }
+    interface AcmeFooter {
+        /**
+          * Footer main text
+         */
+        "footerText"?: string;
+    }
     interface AcmeMenu {
     }
     interface AcmeSubBanner {
@@ -102,6 +121,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "acme-about": AcmeAbout;
         "acme-banner": AcmeBanner;
+        "acme-footer": AcmeFooter;
         "acme-menu": AcmeMenu;
         "acme-sub-banner": AcmeSubBanner;
         "form-finanziabilita": FormFinanziabilita;
@@ -113,6 +133,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "acme-about": LocalJSX.AcmeAbout & JSXBase.HTMLAttributes<HTMLAcmeAboutElement>;
             "acme-banner": LocalJSX.AcmeBanner & JSXBase.HTMLAttributes<HTMLAcmeBannerElement>;
+            "acme-footer": LocalJSX.AcmeFooter & JSXBase.HTMLAttributes<HTMLAcmeFooterElement>;
             "acme-menu": LocalJSX.AcmeMenu & JSXBase.HTMLAttributes<HTMLAcmeMenuElement>;
             "acme-sub-banner": LocalJSX.AcmeSubBanner & JSXBase.HTMLAttributes<HTMLAcmeSubBannerElement>;
             "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
