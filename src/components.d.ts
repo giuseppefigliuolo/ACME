@@ -8,6 +8,26 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AcmeAbout {
     }
+    interface AcmeBanner {
+        /**
+          * Text written inside the button
+         */
+        "callToAction": string;
+        /**
+          * Title for the banner
+         */
+        "titleBanner": string;
+    }
+    interface AcmeSubBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord": string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle": string;
+    }
     interface FormFinanziabilita {
     }
 }
@@ -18,6 +38,18 @@ declare global {
         prototype: HTMLAcmeAboutElement;
         new (): HTMLAcmeAboutElement;
     };
+    interface HTMLAcmeBannerElement extends Components.AcmeBanner, HTMLStencilElement {
+    }
+    var HTMLAcmeBannerElement: {
+        prototype: HTMLAcmeBannerElement;
+        new (): HTMLAcmeBannerElement;
+    };
+    interface HTMLAcmeSubBannerElement extends Components.AcmeSubBanner, HTMLStencilElement {
+    }
+    var HTMLAcmeSubBannerElement: {
+        prototype: HTMLAcmeSubBannerElement;
+        new (): HTMLAcmeSubBannerElement;
+    };
     interface HTMLFormFinanziabilitaElement extends Components.FormFinanziabilita, HTMLStencilElement {
     }
     var HTMLFormFinanziabilitaElement: {
@@ -26,16 +58,40 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "acme-about": HTMLAcmeAboutElement;
+        "acme-banner": HTMLAcmeBannerElement;
+        "acme-sub-banner": HTMLAcmeSubBannerElement;
         "form-finanziabilita": HTMLFormFinanziabilitaElement;
     }
 }
 declare namespace LocalJSX {
     interface AcmeAbout {
     }
+    interface AcmeBanner {
+        /**
+          * Text written inside the button
+         */
+        "callToAction"?: string;
+        /**
+          * Title for the banner
+         */
+        "titleBanner"?: string;
+    }
+    interface AcmeSubBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord"?: string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle"?: string;
+    }
     interface FormFinanziabilita {
     }
     interface IntrinsicElements {
         "acme-about": AcmeAbout;
+        "acme-banner": AcmeBanner;
+        "acme-sub-banner": AcmeSubBanner;
         "form-finanziabilita": FormFinanziabilita;
     }
 }
@@ -44,6 +100,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "acme-about": LocalJSX.AcmeAbout & JSXBase.HTMLAttributes<HTMLAcmeAboutElement>;
+            "acme-banner": LocalJSX.AcmeBanner & JSXBase.HTMLAttributes<HTMLAcmeBannerElement>;
+            "acme-sub-banner": LocalJSX.AcmeSubBanner & JSXBase.HTMLAttributes<HTMLAcmeSubBannerElement>;
             "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
         }
     }
