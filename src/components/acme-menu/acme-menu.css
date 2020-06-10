@@ -1,12 +1,15 @@
-
-*{
-  margin:0px;
-  padding:0px;
+:host {
+  position: relative;
 }
-section{
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-size:1rem;
-  display:flex;
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+section {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: flex;
   flex-direction: row;
   align-items: center;
   height: 100px;
@@ -14,38 +17,38 @@ section{
   border-radius: 0px 0px 30px 30px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33);
 }
-.logo{
+.logo {
   flex-grow: 2;
 }
-nav{
-  flex-grow: 3; 
+nav {
+  flex-grow: 3;
 }
-img{
-  height:50px;
+img {
+  height: 50px;
   width: auto;
   margin-left: 70px;
 }
-ul{
+ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-li{
+li {
   list-style: none;
 }
-a{
-  color:black;
-  text-decoration:none;
+a {
+  color: black;
+  text-decoration: none;
 }
-a:hover{
-  color:#02a4e3;
+a:hover {
+  color: #02a4e3;
   transition: 0.2s;
 }
 
-.blue{
-  color:#02a4e3;
+.blue {
+  color: #02a4e3;
 }
-.blue:hover{
-  color:black;
+.blue:hover {
+  color: black;
   transition: 0.2s;
 }

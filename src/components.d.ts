@@ -6,25 +6,57 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AcmeHeader {
+    interface AcmeAbout {
+    }
+    interface AcmeBanner {
+        /**
+          * Text written inside the button
+         */
+        "callToAction": string;
+        /**
+          * Title for the banner
+         */
+        "titleBanner": string;
     }
     interface AcmeMenu {
+    }
+    interface AcmeSubBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord": string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle": string;
     }
     interface FormFinanziabilita {
     }
 }
 declare global {
-    interface HTMLAcmeHeaderElement extends Components.AcmeHeader, HTMLStencilElement {
+    interface HTMLAcmeAboutElement extends Components.AcmeAbout, HTMLStencilElement {
     }
-    var HTMLAcmeHeaderElement: {
-        prototype: HTMLAcmeHeaderElement;
-        new (): HTMLAcmeHeaderElement;
+    var HTMLAcmeAboutElement: {
+        prototype: HTMLAcmeAboutElement;
+        new (): HTMLAcmeAboutElement;
+    };
+    interface HTMLAcmeBannerElement extends Components.AcmeBanner, HTMLStencilElement {
+    }
+    var HTMLAcmeBannerElement: {
+        prototype: HTMLAcmeBannerElement;
+        new (): HTMLAcmeBannerElement;
     };
     interface HTMLAcmeMenuElement extends Components.AcmeMenu, HTMLStencilElement {
     }
     var HTMLAcmeMenuElement: {
         prototype: HTMLAcmeMenuElement;
         new (): HTMLAcmeMenuElement;
+    };
+    interface HTMLAcmeSubBannerElement extends Components.AcmeSubBanner, HTMLStencilElement {
+    }
+    var HTMLAcmeSubBannerElement: {
+        prototype: HTMLAcmeSubBannerElement;
+        new (): HTMLAcmeSubBannerElement;
     };
     interface HTMLFormFinanziabilitaElement extends Components.FormFinanziabilita, HTMLStencilElement {
     }
@@ -33,21 +65,45 @@ declare global {
         new (): HTMLFormFinanziabilitaElement;
     };
     interface HTMLElementTagNameMap {
-        "acme-header": HTMLAcmeHeaderElement;
+        "acme-about": HTMLAcmeAboutElement;
+        "acme-banner": HTMLAcmeBannerElement;
         "acme-menu": HTMLAcmeMenuElement;
+        "acme-sub-banner": HTMLAcmeSubBannerElement;
         "form-finanziabilita": HTMLFormFinanziabilitaElement;
     }
 }
 declare namespace LocalJSX {
-    interface AcmeHeader {
+    interface AcmeAbout {
+    }
+    interface AcmeBanner {
+        /**
+          * Text written inside the button
+         */
+        "callToAction"?: string;
+        /**
+          * Title for the banner
+         */
+        "titleBanner"?: string;
     }
     interface AcmeMenu {
+    }
+    interface AcmeSubBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord"?: string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle"?: string;
     }
     interface FormFinanziabilita {
     }
     interface IntrinsicElements {
-        "acme-header": AcmeHeader;
+        "acme-about": AcmeAbout;
+        "acme-banner": AcmeBanner;
         "acme-menu": AcmeMenu;
+        "acme-sub-banner": AcmeSubBanner;
         "form-finanziabilita": FormFinanziabilita;
     }
 }
@@ -55,8 +111,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "acme-header": LocalJSX.AcmeHeader & JSXBase.HTMLAttributes<HTMLAcmeHeaderElement>;
+            "acme-about": LocalJSX.AcmeAbout & JSXBase.HTMLAttributes<HTMLAcmeAboutElement>;
+            "acme-banner": LocalJSX.AcmeBanner & JSXBase.HTMLAttributes<HTMLAcmeBannerElement>;
             "acme-menu": LocalJSX.AcmeMenu & JSXBase.HTMLAttributes<HTMLAcmeMenuElement>;
+            "acme-sub-banner": LocalJSX.AcmeSubBanner & JSXBase.HTMLAttributes<HTMLAcmeSubBannerElement>;
             "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
         }
     }
