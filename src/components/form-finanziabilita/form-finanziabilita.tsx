@@ -34,13 +34,15 @@ export class FormFinanziabilita {
             placeholder="Inserisci la partita iva"
             class="input-text"
           />
-          <div class="flex-row">
-            <input type="checkbox" name="" id="" />
-            <p>
-              Dichiaro di aver preso visione dell'<a href="">informativa</a> e
-              acconsento al trattamento dei miei dati personali
-            </p>
-          </div>
+          <p>Messaggio</p>
+          <textarea placeholder="Inserisci il messaggio" />
+        </div>
+        <div class="flex-row">
+          <input type="checkbox" name="" id="" />
+          <p>
+            Dichiaro di aver preso visione dell'<a href="">informativa</a> e
+            acconsento al trattamento dei miei dati personali
+          </p>
           <input type="submit" class="submit"></input>
         </div>
       </Host>
