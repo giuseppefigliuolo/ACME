@@ -6,49 +6,25 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AcmeAbout {
+    interface AcmeHeader {
     }
-    interface AcmeBanner {
-        /**
-          * Text written inside the button
-         */
-        "callToAction": string;
-        /**
-          * Title for the banner
-         */
-        "titleBanner": string;
-    }
-    interface AcmeSubBanner {
-        /**
-          * An hightlighted word for the title of the under-banner section
-         */
-        "boldWord": string;
-        /**
-          * A title for the under-banner section
-         */
-        "subTitle": string;
+    interface AcmeMenu {
     }
     interface FormFinanziabilita {
     }
 }
 declare global {
-    interface HTMLAcmeAboutElement extends Components.AcmeAbout, HTMLStencilElement {
+    interface HTMLAcmeHeaderElement extends Components.AcmeHeader, HTMLStencilElement {
     }
-    var HTMLAcmeAboutElement: {
-        prototype: HTMLAcmeAboutElement;
-        new (): HTMLAcmeAboutElement;
+    var HTMLAcmeHeaderElement: {
+        prototype: HTMLAcmeHeaderElement;
+        new (): HTMLAcmeHeaderElement;
     };
-    interface HTMLAcmeBannerElement extends Components.AcmeBanner, HTMLStencilElement {
+    interface HTMLAcmeMenuElement extends Components.AcmeMenu, HTMLStencilElement {
     }
-    var HTMLAcmeBannerElement: {
-        prototype: HTMLAcmeBannerElement;
-        new (): HTMLAcmeBannerElement;
-    };
-    interface HTMLAcmeSubBannerElement extends Components.AcmeSubBanner, HTMLStencilElement {
-    }
-    var HTMLAcmeSubBannerElement: {
-        prototype: HTMLAcmeSubBannerElement;
-        new (): HTMLAcmeSubBannerElement;
+    var HTMLAcmeMenuElement: {
+        prototype: HTMLAcmeMenuElement;
+        new (): HTMLAcmeMenuElement;
     };
     interface HTMLFormFinanziabilitaElement extends Components.FormFinanziabilita, HTMLStencilElement {
     }
@@ -57,41 +33,21 @@ declare global {
         new (): HTMLFormFinanziabilitaElement;
     };
     interface HTMLElementTagNameMap {
-        "acme-about": HTMLAcmeAboutElement;
-        "acme-banner": HTMLAcmeBannerElement;
-        "acme-sub-banner": HTMLAcmeSubBannerElement;
+        "acme-header": HTMLAcmeHeaderElement;
+        "acme-menu": HTMLAcmeMenuElement;
         "form-finanziabilita": HTMLFormFinanziabilitaElement;
     }
 }
 declare namespace LocalJSX {
-    interface AcmeAbout {
+    interface AcmeHeader {
     }
-    interface AcmeBanner {
-        /**
-          * Text written inside the button
-         */
-        "callToAction"?: string;
-        /**
-          * Title for the banner
-         */
-        "titleBanner"?: string;
-    }
-    interface AcmeSubBanner {
-        /**
-          * An hightlighted word for the title of the under-banner section
-         */
-        "boldWord"?: string;
-        /**
-          * A title for the under-banner section
-         */
-        "subTitle"?: string;
+    interface AcmeMenu {
     }
     interface FormFinanziabilita {
     }
     interface IntrinsicElements {
-        "acme-about": AcmeAbout;
-        "acme-banner": AcmeBanner;
-        "acme-sub-banner": AcmeSubBanner;
+        "acme-header": AcmeHeader;
+        "acme-menu": AcmeMenu;
         "form-finanziabilita": FormFinanziabilita;
     }
 }
@@ -99,9 +55,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "acme-about": LocalJSX.AcmeAbout & JSXBase.HTMLAttributes<HTMLAcmeAboutElement>;
-            "acme-banner": LocalJSX.AcmeBanner & JSXBase.HTMLAttributes<HTMLAcmeBannerElement>;
-            "acme-sub-banner": LocalJSX.AcmeSubBanner & JSXBase.HTMLAttributes<HTMLAcmeSubBannerElement>;
+            "acme-header": LocalJSX.AcmeHeader & JSXBase.HTMLAttributes<HTMLAcmeHeaderElement>;
+            "acme-menu": LocalJSX.AcmeMenu & JSXBase.HTMLAttributes<HTMLAcmeMenuElement>;
             "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
         }
     }
