@@ -21,6 +21,17 @@ export class AcmeAbout {
           </div>
           <img src={getAssetPath("/assets/acme-people.png")} alt="" />
         </div>
+        <div class="stampa">
+          <img src={getAssetPath("/assets/rep.svg")} alt="" />
+          <img src={getAssetPath("/assets/wired.svg")} alt="" />
+          <img src={getAssetPath("/assets/milanofinanza.svg")} alt="" />
+          <img src={getAssetPath("/assets/sole.svg")} alt="" />
+        </div>
+        <img
+          src={getAssetPath("/assets/vettore2.svg")}
+          alt=""
+          class="background-img"
+        />
       </Host>
     );
   }

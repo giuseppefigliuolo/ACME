@@ -5,11 +5,11 @@
   justify-content: center;
   font-family: Poppins, Helvetica, sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 h2 {
   font-size: 41px;
   color: #02467c;
-  font-weight: 100;
 }
 .banner {
   width: 600px;
@@ -18,7 +18,8 @@ h2 {
   position: relative;
   border-radius: 10px;
   box-shadow: -4px 4px 16px rgba(209, 205, 199, 0.49);
-  padding: 2rem;
+  padding: 1rem 3rem;
+  margin-bottom: 5rem;
 }
 .text {
   width: 400px;
@@ -32,11 +33,28 @@ em {
   color: #52c1eb;
 }
 p {
-  font-size: 20px;
+  font-size: 17px;
   color: #02467c;
 }
-img {
+.banner img {
   position: absolute;
-  right: -200px;
-  bottom: -100px;
+  right: -150px;
+  bottom: -50px;
+}
+.stampa {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.stampa * {
+  margin: 2rem;
+  margin-bottom: 5rem;
+}
+.background-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -999;
 }

@@ -2,7 +2,6 @@ dist/
 www/
 loader/
 src/components.d.ts
-src/index.html
 
 *~
 *.sw[mnpcod]
