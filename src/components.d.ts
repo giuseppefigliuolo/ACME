@@ -38,6 +38,8 @@ export namespace Components {
     }
     interface FormFinanziabilita {
     }
+    interface NpmCentralBanner {
+    }
 }
 declare global {
     interface HTMLAcmeAboutElement extends Components.AcmeAbout, HTMLStencilElement {
@@ -76,6 +78,12 @@ declare global {
         prototype: HTMLFormFinanziabilitaElement;
         new (): HTMLFormFinanziabilitaElement;
     };
+    interface HTMLNpmCentralBannerElement extends Components.NpmCentralBanner, HTMLStencilElement {
+    }
+    var HTMLNpmCentralBannerElement: {
+        prototype: HTMLNpmCentralBannerElement;
+        new (): HTMLNpmCentralBannerElement;
+    };
     interface HTMLElementTagNameMap {
         "acme-about": HTMLAcmeAboutElement;
         "acme-banner": HTMLAcmeBannerElement;
@@ -83,6 +91,7 @@ declare global {
         "acme-menu": HTMLAcmeMenuElement;
         "acme-sub-banner": HTMLAcmeSubBannerElement;
         "form-finanziabilita": HTMLFormFinanziabilitaElement;
+        "npm-central-banner": HTMLNpmCentralBannerElement;
     }
 }
 declare namespace LocalJSX {
@@ -118,6 +127,8 @@ declare namespace LocalJSX {
     }
     interface FormFinanziabilita {
     }
+    interface NpmCentralBanner {
+    }
     interface IntrinsicElements {
         "acme-about": AcmeAbout;
         "acme-banner": AcmeBanner;
@@ -125,6 +136,7 @@ declare namespace LocalJSX {
         "acme-menu": AcmeMenu;
         "acme-sub-banner": AcmeSubBanner;
         "form-finanziabilita": FormFinanziabilita;
+        "npm-central-banner": NpmCentralBanner;
     }
 }
 export { LocalJSX as JSX };
@@ -137,6 +149,7 @@ declare module "@stencil/core" {
             "acme-menu": LocalJSX.AcmeMenu & JSXBase.HTMLAttributes<HTMLAcmeMenuElement>;
             "acme-sub-banner": LocalJSX.AcmeSubBanner & JSXBase.HTMLAttributes<HTMLAcmeSubBannerElement>;
             "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
+            "npm-central-banner": LocalJSX.NpmCentralBanner & JSXBase.HTMLAttributes<HTMLNpmCentralBannerElement>;
         }
     }
 }
