@@ -1,0 +1,60 @@
+:host {
+  display: block;
+}
+
+.container{
+  color: #ffffff;
+  background-color: #02A4E3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin:0vw 12vw;  
+  margin-top:-20vw; 
+  border-radius: 20px; 
+} 
+img{
+  height: 30px;
+  width: auto;
+}
+
+.velocita{
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 30px;
+
+}
+
+ .bgimg{
+  background-size: cover;
+
+} 
+.trasparenza{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+
+}
+
+.semplicita{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+
+}
+
+p{
+  margin: 2vw;
+  margin-top: 0;
+}
+
+h2{
+  margin:1vw 0 0.5vw 0;
+}
+
+
+

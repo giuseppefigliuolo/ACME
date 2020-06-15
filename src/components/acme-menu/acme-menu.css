@@ -2,10 +2,6 @@
   position: relative;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-}
 section {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 1rem;
