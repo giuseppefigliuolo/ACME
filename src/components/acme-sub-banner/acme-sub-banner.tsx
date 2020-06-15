@@ -26,12 +26,6 @@ export class AcmeSubBanner {
         <div class="line">
           <img src={getAssetPath("/assets/line.svg")} alt="" />
         </div>
-        <div class="title">
-          <h2>
-            {this.subTitle}
-            <b> {this.boldWord}</b>
-          </h2>
-        </div>
       </Host>
     );
   }

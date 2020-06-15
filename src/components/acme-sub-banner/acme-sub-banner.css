@@ -4,7 +4,7 @@
 
 .ellipses {
   width: 23%;
-  margin-top: -270px;
+  margin-top: -70px;
   /* margin-left: -366px; */
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   /* margin-top: -60px; */
-  margin-top: -600px;
+  margin-top: -700px;
 }
 
 .ellipses img {
@@ -27,7 +27,7 @@
   width: 31%;
   z-index: -2;
   position: relative;
-  top: 4vw;
+  top: 250px;
 }
 
 .line {
@@ -36,6 +36,7 @@
   margin-left: 52px;
   z-index: -1;
   max-height: 250px;
+  visibility: hidden;
 }
 
 .title {
@@ -43,17 +44,4 @@
   justify-content: center;
   position: relative;
   top: -340px;
-}
-
-h2 {
-  color: #02a4e3;
-  background: white;
-  display: initial;
-  padding: 3px;
-  text-align: center;
-  font-size: 2.7rem;
-}
-
-h2 b {
-  color: #02467c;
 }

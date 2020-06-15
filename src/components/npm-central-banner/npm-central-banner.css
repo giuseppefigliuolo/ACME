@@ -7,7 +7,7 @@
   background-color: #02a4e3;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: -300px auto 50px auto;
+  margin: 0px auto 50px auto;
   border-radius: 20px;
   max-width: 1200px;
 }
@@ -48,6 +48,29 @@ p {
   margin-top: 0;
 }
 
-h2 {
+.container h2 {
   margin: 1vw 0 0.5vw 0;
+}
+
+.title {
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.title h2 {
+  /* margin: auto; */
+  width: 100%;
+  /* margin-top: 300px; */
+  color: #02a4e3;
+  /* background: white; */
+  display: initial;
+  padding: 3px;
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.title h2 b {
+  color: #02467c;
 }

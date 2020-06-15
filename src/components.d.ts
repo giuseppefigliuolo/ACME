@@ -39,6 +39,14 @@ export namespace Components {
     interface FormFinanziabilita {
     }
     interface NpmCentralBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord": string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle": string;
     }
 }
 declare global {
@@ -128,6 +136,14 @@ declare namespace LocalJSX {
     interface FormFinanziabilita {
     }
     interface NpmCentralBanner {
+        /**
+          * An hightlighted word for the title of the under-banner section
+         */
+        "boldWord"?: string;
+        /**
+          * A title for the under-banner section
+         */
+        "subTitle"?: string;
     }
     interface IntrinsicElements {
         "acme-about": AcmeAbout;
