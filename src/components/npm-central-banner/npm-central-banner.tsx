@@ -16,7 +16,7 @@ export class NpmCentralBanner {
         <div class="container">
             <div class="velocita">
                 <img src={getAssetPath("/assets/icon-velocita.svg")} alt="icon" /> 
-                <h2>VELOCITA'</h2>
+                <h2>VELOCITÀ</h2>
                 <p>Richiedi una valutazione in 2 minuti. <br></br>
                 Se la tua azienda è finanziabile, ricevi una proposta di finanziamento completa in 3 giorni.</p>
             </div>
@@ -31,7 +31,7 @@ export class NpmCentralBanner {
 
             <div class="semplicita">
                 <img src={getAssetPath("/assets/icon-semplicita.svg")} alt="icon" /> 
-                <h2>SEMPLICITA'</h2>
+                <h2>SEMPLICITÀ</h2>
                 <p>Zero burocrazia. Fai tutto online: <br></br>
                 Accetti la proposta, ti identifichi e firmi il contratto. Nessuno scambio di carta</p>
             </div>
