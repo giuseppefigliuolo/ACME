@@ -4,7 +4,7 @@
 
 .ellipses {
   width: 23%;
-  margin-top: -80px;
+  margin-top: -270px;
   /* margin-left: -366px; */
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   /* margin-top: -60px; */
-  margin-top: -443px;
+  margin-top: -600px;
 }
 
 .ellipses img {
@@ -20,6 +20,7 @@
   margin-left: -55px;
   position: relative;
   top: 28vw;
+  z-index: -999;
 }
 
 .vettore {
@@ -41,7 +42,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  top: -23vw;
+  top: -340px;
 }
 
 h2 {
