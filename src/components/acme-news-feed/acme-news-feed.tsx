@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, State } from "@stencil/core";
+import { Component, Host, h, Prop, State, Element } from "@stencil/core";
 import { News } from "./news.interface";
 
 @Component({
@@ -7,6 +7,7 @@ import { News } from "./news.interface";
   shadow: true,
 })
 export class AcmeNewsFeed {
+  @Element() el: HTMLAcmeNewsFeedElement;
   /** A title for the under-banner section */
   @Prop() headerTitle: string;
 
@@ -22,8 +23,34 @@ export class AcmeNewsFeed {
       });
   };
 
+  private loadingNews = () => {
+    const ul = this.el.shadowRoot.querySelector(".un-list");
+
+    const acmeInterval = setInterval(() => {
+      if (this.newsReady) {
+        ul.innerHTML = "";
+        this.news.map((el) =>
+          ul.insertAdjacentHTML(
+            "beforeend",
+            `<li>
+            <div class="container-news-n-date">
+              <p class="li-title">${el.title}</p>
+              <p class="li-date">${el.date}</p>
+            </div>
+            <p class="li-subtitle">${el.description}</p>
+          </li>`
+          )
+        );
+        clearInterval(acmeInterval);
+      }
+    }, 100);
+
+    ul.innerHTML = `<p class="loading">Caricamento...</p>`;
+  };
+
   componentDidLoad() {
     this.fetchNews();
+    this.loadingNews();
   }
 
   render() {
@@ -35,18 +62,8 @@ export class AcmeNewsFeed {
               <h2>{this.headerTitle}</h2>
             </div>
             <div class="table-body">
-              <ul>
-                {
-                  this.news.map((el) => (
-                    <li>
-                      <div class="container-news-n-date">
-                        <p class="li-title">{el.title}</p>
-                        <p class="li-date">{el.date}</p>
-                      </div>
-                      <p class="li-subtitle">{el.description}</p>
-                    </li>
-                  ))
-                  /* <li>
+              <ul class="un-list">
+                {/* <li>
                   <div class="container-news-n-date">
                     <p class="li-title">
                       Superbonus casa 110%, come non sbagliare nel labirinto
@@ -59,8 +76,7 @@ export class AcmeNewsFeed {
                     indicazioni sulla mappa degli interventi possibili per
                     realizzare una casa non energivora e sicura
                   </p>
-                </li> */
-                }
+                </li>  */}
               </ul>
             </div>
           </div>

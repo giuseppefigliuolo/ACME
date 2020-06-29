@@ -74,6 +74,21 @@ textarea {
   font-family: Poppins, Helvetica, sans-serif;
   resize: none;
 }
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d4;
+}
 .flex-row .submit:disabled {
   filter: grayscale(70%);
 }
