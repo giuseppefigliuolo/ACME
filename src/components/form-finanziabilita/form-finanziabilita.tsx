@@ -13,12 +13,51 @@ export class FormFinanziabilita {
     const submit = this.el.shadowRoot.querySelector(
       ".submit"
     ) as HTMLInputElement;
-    const privacy = this.el.shadowRoot.querySelector(
-      ".privacy"
-    ) as HTMLInputElement;
     submit.disabled = true;
+    const form = this.el.shadowRoot.querySelector(".form") as HTMLElement;
+    const telefono = form.querySelector(".telefono") as HTMLInputElement;
+    const mail = form.querySelector(".mail") as HTMLInputElement;
+    const message = form.querySelector(".messaggio") as HTMLInputElement;
+    const privacy = form.querySelector(".privacy") as HTMLInputElement;
+    const formCheck = () => {
+      let telefonoOk = false;
+      let i = 0;
+      for (i = 0; i < telefono.value.length; i++) {
+        if (telefono.value.length === 10) {
+          telefonoOk = true;
+          break;
+        }
+      }
+      let mailOk = false;
+      for (i = 0; i < mail.value.length; i++) {
+        if (
+          mail.value.length > 0 &&
+          mail.value.match(/[a-z]/i) &&
+          mail.value.includes("@") &&
+          mail.value.includes(".")
+        ) {
+          mailOk = true;
+          break;
+        }
+      }
+      let messageOk = false;
+      for (i = 0; i < message.value.length; i++) {
+        if (message.value.length > 0) {
+          messageOk = true;
+          break;
+        }
+      }
+      if (mailOk && telefonoOk && messageOk && privacy.checked === true) {
+        submit.disabled = false;
+      } else {
+        submit.disabled = true;
+      }
+    };
+    form.addEventListener("keyup", () => {
+      formCheck();
+    });
     privacy.addEventListener("click", () => {
-      privacy.checked ? (submit.disabled = false) : (submit.disabled = true);
+      formCheck();
     });
   }
   render() {
@@ -30,28 +69,24 @@ export class FormFinanziabilita {
             <h3>Compila il form per avere subito un riscontro gratuito</h3>
           </div>
           <div class="flex-column data">
-            <p>Email</p>
+            <p>Email *</p>
             <input
               type="text"
               placeholder="Inserisci la tua mail"
-              class="input-text"
+              class="mail"
             />
-            <p>Telefono</p>
+            <p>Telefono *</p>
             <input
-              type="text"
+              type="number"
               placeholder="Inserisci il tuo numero di telefono"
-              class="input-text"
+              class="telefono"
             />
           </div>
           <div class="flex-column data">
             <p>Partita IVA</p>
-            <input
-              type="text"
-              placeholder="Inserisci la partita iva"
-              class="input-text"
-            />
-            <p>Messaggio</p>
-            <textarea placeholder="Inserisci il messaggio" />
+            <input type="text" placeholder="Inserisci la partita iva" />
+            <p>Messaggio *</p>
+            <textarea placeholder="Inserisci il messaggio" class="messaggio" />
           </div>
           <div class="flex-row">
             <input type="checkbox" name="" class="privacy" />
