@@ -32,6 +32,8 @@ export namespace Components {
          */
         "headerTitle": string;
     }
+    interface AcmePrivateCorporate {
+    }
     interface AcmeSubBanner {
         /**
           * An hightlighted word for the title of the under-banner section
@@ -86,6 +88,12 @@ declare global {
         prototype: HTMLAcmeNewsFeedElement;
         new (): HTMLAcmeNewsFeedElement;
     };
+    interface HTMLAcmePrivateCorporateElement extends Components.AcmePrivateCorporate, HTMLStencilElement {
+    }
+    var HTMLAcmePrivateCorporateElement: {
+        prototype: HTMLAcmePrivateCorporateElement;
+        new (): HTMLAcmePrivateCorporateElement;
+    };
     interface HTMLAcmeSubBannerElement extends Components.AcmeSubBanner, HTMLStencilElement {
     }
     var HTMLAcmeSubBannerElement: {
@@ -110,6 +118,7 @@ declare global {
         "acme-footer": HTMLAcmeFooterElement;
         "acme-menu": HTMLAcmeMenuElement;
         "acme-news-feed": HTMLAcmeNewsFeedElement;
+        "acme-private-corporate": HTMLAcmePrivateCorporateElement;
         "acme-sub-banner": HTMLAcmeSubBannerElement;
         "form-finanziabilita": HTMLFormFinanziabilitaElement;
         "npm-central-banner": HTMLNpmCentralBannerElement;
@@ -142,6 +151,8 @@ declare namespace LocalJSX {
          */
         "headerTitle"?: string;
     }
+    interface AcmePrivateCorporate {
+    }
     interface AcmeSubBanner {
         /**
           * An hightlighted word for the title of the under-banner section
@@ -170,6 +181,7 @@ declare namespace LocalJSX {
         "acme-footer": AcmeFooter;
         "acme-menu": AcmeMenu;
         "acme-news-feed": AcmeNewsFeed;
+        "acme-private-corporate": AcmePrivateCorporate;
         "acme-sub-banner": AcmeSubBanner;
         "form-finanziabilita": FormFinanziabilita;
         "npm-central-banner": NpmCentralBanner;
@@ -184,6 +196,7 @@ declare module "@stencil/core" {
             "acme-footer": LocalJSX.AcmeFooter & JSXBase.HTMLAttributes<HTMLAcmeFooterElement>;
             "acme-menu": LocalJSX.AcmeMenu & JSXBase.HTMLAttributes<HTMLAcmeMenuElement>;
             "acme-news-feed": LocalJSX.AcmeNewsFeed & JSXBase.HTMLAttributes<HTMLAcmeNewsFeedElement>;
+            "acme-private-corporate": LocalJSX.AcmePrivateCorporate & JSXBase.HTMLAttributes<HTMLAcmePrivateCorporateElement>;
             "acme-sub-banner": LocalJSX.AcmeSubBanner & JSXBase.HTMLAttributes<HTMLAcmeSubBannerElement>;
             "form-finanziabilita": LocalJSX.FormFinanziabilita & JSXBase.HTMLAttributes<HTMLFormFinanziabilitaElement>;
             "npm-central-banner": LocalJSX.NpmCentralBanner & JSXBase.HTMLAttributes<HTMLNpmCentralBannerElement>;

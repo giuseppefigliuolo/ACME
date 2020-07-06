@@ -61,7 +61,7 @@ h3 {
 .data {
   width: 33%;
 }
-.input-text,
+input,
 textarea {
   padding: 1rem;
   border-radius: 10px;
