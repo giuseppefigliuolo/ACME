@@ -23,31 +23,6 @@ export class AcmeNewsFeed {
       });
   };
 
-  // private loadingNews = () => {
-  //   const ul = this.el.shadowRoot.querySelector(".un-list");
-
-  //   const acmeInterval = setInterval(() => {
-  //     if (this.newsReady) {
-  //       ul.innerHTML = "";
-  //       // this.news.map((el) =>
-  //       //   ul.insertAdjacentHTML(
-  //       //     "beforeend",
-  //       //     `<li>
-  //       //     <div class="container-news-n-date">
-  //       //       <p class="li-title">${el.title}</p>
-  //       //       <p class="li-date">${el.date}</p>
-  //       //     </div>
-  //       //     <p class="li-subtitle">${el.description}</p>
-  //       //   </li>`
-  //       //   )
-  //       // );
-  //       clearInterval(acmeInterval);
-  //     }
-  //   }, 100);
-
-  //   ul.innerHTML = `<p class="loading">Caricamento...</p>`;
-  // };
-
   componentDidLoad() {
     this.fetchNews();
     // this.loadingNews();
