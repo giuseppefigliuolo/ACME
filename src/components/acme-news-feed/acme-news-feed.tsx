@@ -23,34 +23,9 @@ export class AcmeNewsFeed {
       });
   };
 
-  private loadingNews = () => {
-    const ul = this.el.shadowRoot.querySelector(".un-list");
-
-    const acmeInterval = setInterval(() => {
-      if (this.newsReady) {
-        ul.innerHTML = "";
-        this.news.map((el) =>
-          ul.insertAdjacentHTML(
-            "beforeend",
-            `<li>
-            <div class="container-news-n-date">
-              <p class="li-title">${el.title}</p>
-              <p class="li-date">${el.date}</p>
-            </div>
-            <p class="li-subtitle">${el.description}</p>
-          </li>`
-          )
-        );
-        clearInterval(acmeInterval);
-      }
-    }, 100);
-
-    ul.innerHTML = `<p class="loading">Caricamento...</p>`;
-  };
-
   componentDidLoad() {
     this.fetchNews();
-    this.loadingNews();
+    // this.loadingNews();
   }
 
   render() {
@@ -63,20 +38,19 @@ export class AcmeNewsFeed {
             </div>
             <div class="table-body">
               <ul class="un-list">
-                {/* <li>
-                  <div class="container-news-n-date">
-                    <p class="li-title">
-                      Superbonus casa 110%, come non sbagliare nel labirinto
-                      dell’agevolazione
-                    </p>
-                    <p class="li-date">23/06/2020</p>
-                  </div>
-                  <p class="li-subtitle">
-                    Una guida da scaricare per gli abbonati di 24+ con nuove
-                    indicazioni sulla mappa degli interventi possibili per
-                    realizzare una casa non energivora e sicura
-                  </p>
-                </li>  */}
+                {this.newsReady ? (
+                  this.news.map((el) => (
+                    <li>
+                      <div class="container-news-n-date">
+                        <p class="li-title">{el.title}</p>
+                        <p class="li-date">{el.date}</p>
+                      </div>
+                      <p class="li-subtitle">{el.description}</p>
+                    </li>
+                  ))
+                ) : (
+                  <p class="loading">Caricamento...</p>
+                )}
               </ul>
             </div>
           </div>
